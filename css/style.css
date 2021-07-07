@@ -1,0 +1,757 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+nav {
+    background-color: rgb(75, 79, 191);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: white;
+    min-height: 50px;
+    width: 100vw;
+}
+
+.containerProfil {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    width: 100%;
+    right: 0;
+    transition: 1s all ease-in-out;
+    display: none;
+}
+
+ul li {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px 0 10px 0;
+    position: relative;
+    transition: 1s all ease-in-out;
+}
+
+ul li::after {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    background-color: rgb(19, 250, 19);
+    border-radius: 100%;
+    left: 10px;
+}
+
+ul li div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exit {
+    transition: 1s all ease-in-out;
+    padding: 5px 5px;
+}
+
+.exit:hover {
+    background-color: red;
+    color: white;
+}
+
+nav h2 {
+    color: white;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+nav h2 span {
+    font-weight: bold;
+}
+
+nav h2::before {
+    content: 'TM';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    font-size: 0.5em;
+}
+
+nav svg {
+    fill: white;
+    height: 25px;
+    position: relative;
+    margin-left: 15px;
+}
+
+.profil {
+    border-radius: 100%;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.containerProfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+    ;
+}
+
+.containerProfil svg {
+    border-right: 1px solid rgb(216, 216, 216);
+    margin-right: 10px;
+    padding-right: 10px;
+    ;
+}
+
+header {
+    background-color: rgb(34, 35, 92);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+header svg {
+    fill: white;
+    height: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    ;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+form input {
+    height: 100%;
+    width: 90%;
+    background-color: rgb(231, 230, 230);
+    border: 1px solid gray;
+}
+
+.alerta {
+    background-color: rgb(75, 79, 191);
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    transition: 1s all;
+    width: 95%;
+    margin: auto;
+}
+
+.alerta::before {
+    content: 'x';
+    position: absolute;
+    right: 10px;
+}
+
+.alerta span {
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.butoaneTrafic a {
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 0.9em;
+    transition: 1s all;
+}
+
+.butoaneTrafic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.traffic-widget,
+.daily-traffic {
+    border-bottom: 1px solid rgb(112, 112, 112);
+    padding-bottom: 30px;
+}
+
+.traficHeader {
+    width: 95%;
+    margin: auto;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+.daily-traffic h2,
+.mobile-user h2 {
+    margin-left: 10px;
+}
+
+.containerTrafficChart,
+.containerDailyChart {
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.containerCanvas {
+    display: flex;
+    justify-content: center;
+}
+
+.canvasChart {
+    width: 50%;
+}
+
+.mobile-user {
+    border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+.stats svg {
+    fill: white;
+    width: 50%;
+    height: 50%;
+}
+
+.socialStats {
+    border-bottom: 1px solid rgb(112, 112, 112);
+    padding-bottom: 20px;
+}
+
+.containerSVG {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 39, 138);
+    border-radius: 100%;
+    margin-left: 20px;
+}
+
+.stats {
+    background-color: rgb(218, 218, 218);
+    border: 1px solid gray;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+
+.socialStats {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.informatiiStats {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    margin-left: 20px;
+}
+
+.informatiiStats h3 {
+    font-size: 2em;
+    color: rgb(80, 80, 80);
+    position: absolute;
+}
+
+.informatiiStats p {
+    color: rgb(30, 39, 138);
+    font-weight: bold;
+}
+
+.members h2 {
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.containerPersoane {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    line-height: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.containerPersoane img {
+    border-radius: 100%;
+    height: 80px;
+}
+
+.containerPersoane a {
+    color: rgb(30, 39, 138);
+    text-decoration: none;
+}
+
+.persoana {
+    border-bottom: 1px solid rgb(112, 112, 112);
+    padding-bottom: 20px;
+}
+
+.recentActivity {
+    width: 95%;
+    margin: auto;
+}
+
+.containerActivity {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.containerActivity img {
+    border-radius: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.containerActivity span {
+    font-weight: bold;
+}
+
+.containerActivity p {
+    width: 80%;
+    margin: auto;
+}
+
+.messageUser h2 {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+    ;
+}
+
+.messageUser {
+    border-bottom: 1px solid rgb(112, 112, 112);
+    padding-bottom: 20px;
+}
+
+.messageUser form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 10px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+#Search {
+    min-height: 50px;
+    border-radius: 5px;
+}
+
+#Message {
+    min-height: 100px;
+    border-radius: 5px;
+    position: relative;
+}
+
+::-webkit-input-placeholder {
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+
+input[type="text"]#Message::-webkit-input-placeholder {
+    position: absolute;
+    top: 15px;
+}
+
+.messageUser button {
+    width: 91%;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    height: 50px;
+    color: white;
+    background-color: rgb(75, 79, 191);
+    border: none;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 112, 112);
+    font-size: 1.2em;
+}
+
+.settings h2 {
+    width: 95%;
+    margin: auto;
+}
+
+.select {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.select button {
+    background-color: rgb(75, 79, 191);
+    color: white;
+    width: 30%;
+    border: 3px solid rgb(112, 112, 112);
+    border-radius: 40px 40px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: 1s all ease-in-out;
+    max-width: 100px;
+}
+
+.select button::after {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    right: 5px;
+    top: 5px;
+    border: 3px solid rgb(112, 112, 112);
+    background-color: white;
+    transform: var(--translate);
+    transition: 1s all ease-in-out;
+    display: block;
+}
+
+.select button p {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+.OFF {
+    margin-right: 10px;
+    display: none;
+}
+
+.timeZoneForm {
+    height: 50px;
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.timeZoneForm select {
+    min-height: 50px;
+    width: 100%;
+}
+
+.saveAndCancel {
+    width: 95%;
+    margin: auto;
+    height: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.saveAndCancel button {
+    width: 47%;
+    height: 100%;
+    background-color: rgb(75, 79, 191);
+    color: white;
+    border-radius: 5px;
+    text-transform: unset;
+}
+
+.saveAndCancel button:nth-child(2) {
+    background-color: gray;
+}
+
+#Message {
+    width: 90%;
+    background-color: rgb(231, 230, 230);
+}
+
+textarea::-webkit-input-placeholder {
+    position: absolute;
+    top: 15px;
+    font-size: 1.3em;
+}
+
+#timeZone {
+    background-color: rgb(231, 230, 230);
+    width: 100%;
+    margin: auto;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+@media(min-width:730px) {
+    nav {
+        grid-area: nav;
+    }
+    header {
+        grid-area: head;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding-bottom: 20px;
+        justify-content: flex-start;
+        row-gap: 50px;
+    }
+    .butoaneTrafic {}
+    .butoaneTrafic a {
+        width: 100px;
+        height: 20px;
+        border-radius: unset;
+        text-align: center;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    main {
+        grid-area: main;
+    }
+    body {
+        display: grid;
+        grid-template-areas: "nav nav " "head main";
+        grid-template-columns: 100px 1fr;
+    }
+    header svg {
+        height: 50px;
+        margin-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        ;
+    }
+    header svg:hover {
+        border-left: 2px solid green;
+        transition: 1s all ease-in-out;
+    }
+    .firstForm {
+        min-height: 50px;
+    }
+    .traficHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .containerTraficAndMobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .daily-traffic,
+    .mobile-user {
+        border: 1px solid gray;
+    }
+    .socialStats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 0.9em;
+    }
+    .informatiiStats {
+        display: flex;
+        align-items: center;
+        justify-items: flex-end;
+        min-width: 90px;
+        text-align: left;
+    }
+    .informatiiStats p {
+        display: block;
+        min-width: 100%;
+    }
+    .informatiiStats h3 {
+        transform: scale(1, 2);
+        margin-top: 40px;
+    }
+    .persoana {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
+    }
+    .containerInfPersoana {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    .pozaAndDetail {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .containerActivity .persoana {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 20px;
+    }
+    .informatiiActivity {
+        text-align: left;
+        width: 60%;
+    }
+    .informatiiActivity p {
+        margin: 0;
+        line-height: 20px;
+        width: 100%;
+    }
+    .containerActivity .persoana {
+        padding-bottom: 10px;
+        position: relative;
+    }
+    .containerActivity .persoana::after {
+        content: ">";
+        position: absolute;
+        right: 20px;
+        color: rgb(73, 73, 243);
+        transform: scale(2, 2);
+    }
+    .select {
+        justify-content: flex-start;
+    }
+    .pSelect {
+        min-width: 200px;
+    }
+    #Message {
+        min-height: 200px;
+    }
+}
+
+@media(min-width:1024px) {
+    header {
+        padding-bottom: 0;
+    }
+    .containerMemberActivity {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .containerMemberActivity h2 {
+        margin-left: 10px;
+        padding: 0;
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+    .members {
+        margin: 0;
+        padding: 0;
+        border: 1px solid gray;
+    }
+    .recentActivity {
+        margin: 0;
+        padding: 0;
+        border: 1px solid gray;
+        width: 99%;
+    }
+    .members .persoana,
+    .recentActivity .persoana {
+        height: 100px;
+        margin: 0;
+        padding: 0;
+    }
+    .containerPersoane {
+        row-gap: 20px;
+    }
+    .persoana {
+        min-height: 100px;
+        font-size: 1em;
+    }
+    .persoana img {
+        margin: 0;
+    }
+    .recentActivity .persoana {
+        width: 95%;
+        margin: auto;
+    }
+    #Message {
+        min-height: 140px;
+    }
+    #Search {
+        max-height: 50px;
+    }
+    .messageUser {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    .messageUser button {
+        padding: 0;
+        top: 0;
+        margin-top: 55px;
+        margin-bottom: 0;
+    }
+    .settings button {
+        margin: 0;
+        padding: 0;
+    }
+    .messageUser form {
+        padding: 0;
+        margin: 0;
+        height: 50%;
+    }
+    .settings {
+        border-left: 1px solid gray;
+    }
+    .persoana:nth-child(4) {
+        border: none;
+    }
+    .containerActivity:nth-child(5) .persoana {
+        border: none;
+    }
+    body {
+        max-width: 2500px;
+        margin: auto;
+    }
+    nav {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    nav h2 {
+        margin: 0;
+        padding: 0;
+    }
+    .firstForm input {
+        width: 100%;
+    }
+    nav h2 {
+        margin-left: 10px;
+    }
+}
+
+nav h2 {
+    text-transform: unset;
+}
